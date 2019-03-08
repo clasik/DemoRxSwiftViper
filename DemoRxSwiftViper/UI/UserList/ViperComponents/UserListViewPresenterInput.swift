@@ -12,9 +12,13 @@ protocol UserListViewPresenterInput: class {
     
     var userListView: UserListViewInput? { get set }
     
+    var router: UserListWireframe? { get set }
+    
     func resetPagination()
     
     func getUserList()
+    
+    func didSelectUser(user: User)
     
 }
 

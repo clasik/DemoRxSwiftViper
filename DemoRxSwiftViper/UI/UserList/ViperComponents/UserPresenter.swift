@@ -10,6 +10,9 @@ class UserPresenter: UserListViewPresenterInput{
     
     weak var userListView: UserListViewInput?
     var interactor: UserInteractorInput!
+    
+    var router: UserListWireframe?
+    
     var page: Int! = 0
     
     func resetPagination(){
@@ -20,6 +23,10 @@ class UserPresenter: UserListViewPresenterInput{
     func getUserList() {
         interactor.getUserList(page: page)
         page += 1
+    }
+    
+    func didSelectUser(user: User) {
+        router!.presentDetails(for: user)
     }
 }
 

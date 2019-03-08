@@ -41,6 +41,8 @@
 		735D2709222EA94C001EF223 /* UserResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D2708222EA94C001EF223 /* UserResponseTest.swift */; };
 		735D270C222EAACA001EF223 /* ConstantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D270B222EAACA001EF223 /* ConstantsTest.swift */; };
 		735D270E222EAB69001EF223 /* UserTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D270D222EAB69001EF223 /* UserTableViewCellTest.swift */; };
+		73AC721822327CFF002B1FD1 /* UserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC721722327CFF002B1FD1 /* UserListRouter.swift */; };
+		73AC721A22327F72002B1FD1 /* UserListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC721922327F72002B1FD1 /* UserListContract.swift */; };
 		73B5A4B6222EDAEF00A5529C /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73038543222EA40D00CCB616 /* UserListViewController.swift */; };
 		73E0AAF0222EA37F0043F391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0AAEF222EA37F0043F391 /* AppDelegate.swift */; };
 		73E0AAF5222EA37F0043F391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E0AAF3222EA37F0043F391 /* Main.storyboard */; };
@@ -100,6 +102,8 @@
 		735D2708222EA94C001EF223 /* UserResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseTest.swift; sourceTree = "<group>"; };
 		735D270B222EAACA001EF223 /* ConstantsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTest.swift; sourceTree = "<group>"; };
 		735D270D222EAB69001EF223 /* UserTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellTest.swift; sourceTree = "<group>"; };
+		73AC721722327CFF002B1FD1 /* UserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRouter.swift; sourceTree = "<group>"; };
+		73AC721922327F72002B1FD1 /* UserListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListContract.swift; sourceTree = "<group>"; };
 		73E0AAEC222EA37F0043F391 /* DemoRxSwiftViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoRxSwiftViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E0AAEF222EA37F0043F391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73E0AAF4222EA37F0043F391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				73038548222EA40D00CCB616 /* UserInteractor.swift */,
 				73038549222EA40D00CCB616 /* UserPresenter.swift */,
 				7303854A222EA40D00CCB616 /* UserListViewInput.swift */,
+				73AC721722327CFF002B1FD1 /* UserListRouter.swift */,
+				73AC721922327F72002B1FD1 /* UserListContract.swift */,
 			);
 			path = ViperComponents;
 			sourceTree = "<group>";
@@ -649,11 +655,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AC721822327CFF002B1FD1 /* UserListRouter.swift in Sources */,
 				7303855F222EA40D00CCB616 /* AlamofireDataRequestExtensions.swift in Sources */,
 				73038565222EA40D00CCB616 /* BaseNetworkRequest.swift in Sources */,
 				7303857D222EA40D00CCB616 /* UserListViewPresenterInput.swift in Sources */,
 				73038583222EA40D00CCB616 /* UserPresenter.swift in Sources */,
 				73038556222EA40D00CCB616 /* ArrayExtension.swift in Sources */,
+				73AC721A22327F72002B1FD1 /* UserListContract.swift in Sources */,
 				7303857A222EA40D00CCB616 /* UserInteractorOutput.swift in Sources */,
 				73038595222EA40D00CCB616 /* Name.swift in Sources */,
 				73038559222EA40D00CCB616 /* IntExtensions.swift in Sources */,
