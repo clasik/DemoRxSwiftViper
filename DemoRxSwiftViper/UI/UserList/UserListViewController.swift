@@ -19,7 +19,7 @@ class UserListViewController: BaseViewController, TableViewDelegate {
     
     private var presenter: UserListViewPresenterInput!
     private var interactor: UserInteractorInput!
-    private var userSelected: User!
+    private var router: UserListRouter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +29,15 @@ class UserListViewController: BaseViewController, TableViewDelegate {
         refreshTable((Any).self);
     }
     
-    
     private func initializePresenter(){
         presenter = UserPresenter()
         interactor = UserInteractor()
         interactor.output = presenter as? UserInteractorOutput
         presenter.userListView = self
         presenter.interactor = interactor
+        router = UserListRouter()        
+        router.viewController = self
+        presenter.router = router
     }
     
     @IBAction func refreshTable(_ sender: Any) {
@@ -65,8 +67,7 @@ class UserListViewController: BaseViewController, TableViewDelegate {
     // MARK: - TableViewDelegate
     
     func selectedUser(user: User) {
-        self.userSelected = user
-        self.performSegue(withIdentifier: "userDetailSegue", sender: self)
+        presenter.didSelectUser(user: user)
     }
     
     func reloadData(){
@@ -75,20 +76,6 @@ class UserListViewController: BaseViewController, TableViewDelegate {
     
     func loadMore(){
         presenter.getUserList()
-    }
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "userDetailSegue" {
-            if let destinationVC = segue.destination as? UserDetailViewController {
-                destinationVC.user = self.userSelected;
-            }
-        }
     }
 }
 
